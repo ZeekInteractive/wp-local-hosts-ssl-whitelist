@@ -2,7 +2,7 @@
 	"name": "zeek/wp-local-hosts-ssl-whitelist",
 	"description": "Disable WordPress's certificate verification selectively against local hosts that exist in /etc/hosts",
 	"type": "library",
-	"license": "proprietary",
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Aaron Holbrook",
