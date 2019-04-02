@@ -23,8 +23,6 @@
 	"autoload": {
 		"files": ["package.php"]
 	},
-	"require-dev": {
-	},
 	"require": {
 		"php": ">=7.0"
 	}
