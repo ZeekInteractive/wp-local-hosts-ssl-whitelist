@@ -3,11 +3,11 @@
 namespace Zeek\WP_Local_Hosts_SSL_Whitelist;
 
 function is_local_dev_env() : bool {
-	if ( isset( $_ENV['LOCAL_DEV'] ) && true === $_ENV['LOCAL_DEV'] ) {
+	if ( isset( $_ENV['LOCAL_HOSTS_SSL_WHITELIST'] ) && true === $_ENV['LOCAL_HOSTS_SSL_WHITELIST'] ) {
 		return true;
 	}
 
-	if ( defined( 'LOCAL_DEV' ) && true === LOCAL_DEV ) {
+	if ( defined( 'LOCAL_HOSTS_SSL_WHITELIST' ) && true === LOCAL_HOSTS_SSL_WHITELIST ) {
 		return true;
 	}
 

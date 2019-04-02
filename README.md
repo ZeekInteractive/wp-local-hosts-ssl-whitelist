@@ -5,10 +5,10 @@ Disable WordPress's certificate verification selectively against local hosts tha
 ## Usage
 Add the following to your `.env.php` file:
 ```php
-'LOCAL_DEV' => true,
+'LOCAL_HOSTS_SSL_WHITELIST' => true,
 ```
 
 Or you can add the following constant to your `wp-config.php` file:
 ```php
-define( 'LOCAL_DEV', true );
+define( 'LOCAL_HOSTS_SSL_WHITELIST', true );
 ```
