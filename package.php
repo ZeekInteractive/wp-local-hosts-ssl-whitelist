@@ -2,7 +2,7 @@
 
 namespace Zeek\WP_Local_Hosts_SSL_Whitelist;
 
-function is_local_dev_env() : bool {
+function is_enabled() : bool {
 	if ( isset( $_ENV['LOCAL_HOSTS_SSL_WHITELIST'] ) && true === $_ENV['LOCAL_HOSTS_SSL_WHITELIST'] ) {
 		return true;
 	}
@@ -21,7 +21,7 @@ function is_local_dev_env() : bool {
  */
 add_filter( 'https_ssl_verify', function( $verify, $url ) {
 
-	if ( true !== is_local_dev_env() ) {
+	if ( true !== is_enabled() ) {
 		return $verify;
 	}
 
