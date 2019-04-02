@@ -17,7 +17,7 @@ function is_enabled() : bool {
 /**
  * Disable WordPress's certificate verification selectively against local hosts that exist in /etc/hosts
  *
- * This is disabled by default, to utilize add 'LOCAL_DEV' => true in .env.php
+ * This is disabled by default, to utilize add 'LOCAL_HOSTS_SSL_WHITELIST' => true in .env.php
  */
 add_filter( 'https_ssl_verify', function( $verify, $url ) {
 
