@@ -21,6 +21,10 @@ function is_enabled() : bool {
  */
 add_filter( 'https_ssl_verify', function( $verify, $url ) {
 
+	if ( empty( $url ) ) {
+		return $verif;
+	}
+	
 	if ( true !== is_enabled() ) {
 		return $verify;
 	}
