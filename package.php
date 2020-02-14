@@ -19,10 +19,10 @@ function is_enabled() : bool {
  *
  * This is disabled by default, to utilize add 'LOCAL_HOSTS_SSL_WHITELIST' => true in .env.php
  */
-add_filter( 'https_ssl_verify', function( $verify, $url ) {
+add_filter( 'https_ssl_verify', function( $verify, $url = null ) {
 
 	if ( empty( $url ) ) {
-		return $verif;
+		return $verify;
 	}
 	
 	if ( true !== is_enabled() ) {
